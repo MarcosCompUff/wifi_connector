@@ -21,8 +21,8 @@ class MainActivity : FlutterActivity() {
                 // Se for o método connectWifi, executa a função de conectar na rede wifi
                 "connectWifi" -> {
                     // Obtém o ssid e a senha dos argumentos do método
-                     val ssid = call.argument<String>("ssid")
-                     val senha = call.argument<String>("senha")
+                    val ssid = call.argument<String>("ssid")
+                    val senha = call.argument<String>("senha")
 
                     // Chama a função de conectar na rede wifi com o ssid e a senha
                     connectWifi(ssid, senha, result)

@@ -6,9 +6,9 @@ class WifiChannel {
 
   Future<void> connectWifi(String ssid, String senha) async {
     try {
-      await _channel.invokeMethod('connectWifi', [ssid, senha]);
+      await _channel.invokeMethod('connectWifi', {'ssid': ssid, 'senha': senha});
     } on PlatformException catch (e) {
-      debugPrint(e.message);
+      debugPrint("ERROR: $e");
     }
   }
 }
