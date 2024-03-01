@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wifi_connector/channels/wifi_channel.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final WifiChannel _channel = WifiChannel();
+
+  void _connectWifi(String ssid, String senha) {
+    _channel.connectWifi(ssid, senha);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(onPressed: () {
-
+              _connectWifi("ssid", "senha");
             }, child: const Text("Conectar"))
           ],
         ),
