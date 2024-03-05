@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(onPressed: () {
-              _connectWifi("ssid", "senha");
+              _connectWifi("moto e22_5464", "semsenhaqjue");
             }, child: const Text("Conectar"))
           ],
         ),
